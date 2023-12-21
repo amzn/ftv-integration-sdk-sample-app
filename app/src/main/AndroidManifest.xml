@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <uses-permission android:name="com.amazon.tv.developer.sdk.content.USE_SDK" />
+  <uses-permission android:name="android.permission.INTERNET"/>
+
+  <application
+      android:icon="@color/white"
+      android:label="@string/app_name"
+      android:supportsRtl="true"
+      android:theme="@style/Theme.FireTvIntegrationSDKReferenceApp"
+      tools:targetApi="31">
+
+    <!--Note: It is critical to define android:required as false, as you see below.
+    If you don’t, the app will only install on Fire TV devices where the library is present.-->
+    <uses-library
+        android:name="com.amazon.tv.developer.sdk.content"
+        android:required="false" />
+
+    <activity
+        android:name=".MainActivity"
+        android:exported="true">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+
+    <service
+        android:name="com.amazon.firetv.integrationsdk.sdk.MyAmznDataIntegrationService"
+        android:exported="true"
+        android:permission="com.amazon.tv.developer.sdk.content.READ_DATA_SERVICE">
+      <meta-data
+          android:name="com.amazon.tv.developer.sdk.content.data_integration_service_class"
+          android:value="com.amazon.firetv.integrationsdk.sdk.MyAmznDataIntegrationService" />
+    </service>
+
+  </application>
+
+</manifest>

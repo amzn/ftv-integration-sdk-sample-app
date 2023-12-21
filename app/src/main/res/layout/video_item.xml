@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:clickable="true"
+    android:focusable="true">
+
+  <ImageButton
+      android:id="@+id/item_video_image_button"
+      android:layout_width="224dp"
+      android:layout_height="224dp"
+      android:contentDescription="@string/video_image_tile" />
+
+  <TextView
+      android:id="@+id/item_video_text"
+      android:text="@string/video_item_name"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center" />
+
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+  <!-- Disable the NotificationPermission check in this project -->
+  <!-- See: https://github.com/bumptech/glide/issues/4850 -->
+  <issue id="NotificationPermission" severity="ignore" />
+</lint>

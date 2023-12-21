@@ -1,0 +1,21 @@
+<resources>
+  <string name="app_name">FireTvIntegrationSDKReferenceApp</string>
+  <string name="videos_row_name">Videos Row</string>
+  <string name="watchlist_row_name">Watch List</string>
+  <string name="profile1_name">App profile 1</string>
+  <string name="profile2_name">App profile 2</string>
+  <string name="select_profile_heading">Select Profile</string>
+  <string name="video_player_message">Playing video: %1$s</string>
+  <string name="video_item_name">Video Name: %1$s</string>
+
+  <!-- Images/videos used in this sample are courtesy of the Blender Foundation,
+  shared under copyright or Creative Commons license.-->
+
+  <!-- Tears of Steel: (CC) Blender Foundation | mango.blender.org -->
+  <string name="video1_url">https://storage.googleapis.com/wvmedia/clear/h264/tears/tears.mpd</string>
+
+  <!-- Big Buck Bunny video provided by the Blender Foundation.
+  (c) copyright 2008, Blender Foundation / www.bigbuckbunny.org -->
+  <string name="video2_url">https://storage.googleapis.com/exoplayer-test-media-0/BigBuckBunny_320x180.mp4</string>
+  <string name="video_image_tile">Video image tile</string>
+</resources>

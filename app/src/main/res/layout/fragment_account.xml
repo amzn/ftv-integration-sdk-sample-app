@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".account.AccountFragment"
+    android:orientation="vertical"
+    android:id="@+id/account_fragment_layout">
+
+    <TextView
+        android:text="@string/select_profile_heading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="145dp"
+        android:id="@+id/radioGroup_profile"
+        android:checkedButton="@id/radioButton_profile1">
+
+      <RadioButton
+          android:text="@string/profile1_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/radioButton_profile1"
+          android:textColor="#090909" />
+
+      <RadioButton
+          android:text="@string/profile2_name"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/radioButton_profile2"
+          android:textColor="#090909" />
+    </RadioGroup>
+</LinearLayout>

@@ -16,8 +16,6 @@ import androidx.fragment.app.Fragment
 import com.amazon.firetv.integrationsdk.FragmentReplacementListener
 import com.amazon.firetv.integrationsdk.R
 import com.amazon.firetv.integrationsdk.client.MyCustomerDataApiClient
-import com.amazon.firetv.integrationsdk.sdk.FireTvContentEntitlementReporter
-import com.amazon.firetv.integrationsdk.sdk.FireTvSubscriptionEntitlementReporter
 import com.amazon.firetv.integrationsdk.video.browser.VideoBrowserFragment
 import com.amazon.firetv.integrationsdk.video.watchlist.WatchlistRepository
 
@@ -93,19 +91,6 @@ class SignInFragment : AccountFragment() {
         // Retrieve watchlist from server on login, WatchlistRepository will send the data to the FireTvIntegrationSDK
         val watchlistRepository = WatchlistRepository.getInstance()
         watchlistRepository.refreshWatchlistForAllProfiles(it.context)
-
-        // Retrieve customer entitlements on login and report to FireTvIntegrationSDK
-        val customerDataApiClient = MyCustomerDataApiClient()
-        FireTvContentEntitlementReporter().refreshAllContentEntitlements(
-            customerDataApiClient.retrieveCustomerPurchasedContent(),
-            customerDataApiClient.retrieveCustomerRentedContent(),
-            customerDataApiClient.retrieveCustomerRecordedContent(),
-            it.context
-        )
-        FireTvSubscriptionEntitlementReporter().refreshAllSubscriptionEntitlements(
-            customerDataApiClient.retrieveCustomerSubscriptions(),
-            it.context
-        )
 
         fragmentReplacementListener.replaceFragment(VideoBrowserFragment())
     }

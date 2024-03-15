@@ -22,6 +22,7 @@ inline fun isFTVIntegrationSDKSupportedOnDevice(context: Context, function: () -
         Log.i(FTV_FEATURE_AVAILABILITY_TAG, "The Fire TV Integration SDK is not supported on this device")
     }
 }
+
 fun hashProfileId(profileId: String): String {
     /* We recommend taking a hash value of your internal profile ID, which should be the same across all devices.
        DO NOT send us the profile name provided by the customer.

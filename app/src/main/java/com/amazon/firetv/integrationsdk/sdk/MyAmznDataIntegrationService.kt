@@ -37,24 +37,11 @@ class MyAmznDataIntegrationService : AmazonDataIntegrationService() {
     }
 
     override fun getAllContentEntitlements(entitlementReceiver: AmazonContentEntitlementReceiver) {
-        val amznContentEntitlements = ArrayList<AmazonContentEntitlement>()
-        amznContentEntitlements.addAll(apiClient.retrieveCustomerPurchasedContent()
-            .map { it.toAmazonContentEntitlement() })
-        amznContentEntitlements.addAll(apiClient.retrieveCustomerRentedContent()
-            .map { it.toAmazonContentEntitlement() })
-        amznContentEntitlements.addAll(apiClient.retrieveCustomerRecordedContent()
-            .map { it.toAmazonContentEntitlement() })
-
-        // Note: Content entitlements, subscription entitlements, and customer list entries can be paginated by using setContentEntitlements, setSubscriptions, and setCustomerList.
-        // See <<TODO>>
-        entitlementReceiver.setContentEntitlements(amznContentEntitlements)
+        // No-op, API not implemented
     }
 
     override fun getAllSubscriptionEntitlements(entitlementsReceiver: AmazonSubscriptionEntitlementReceiver) {
-        val amznSubscriptions: List<AmazonSubscriptionEntitlement> =
-            apiClient.retrieveCustomerSubscriptions()
-                .map { it.toAmazonSubscriptionEntitlement() }
-        entitlementsReceiver.addSubscriptions(amznSubscriptions)
+        // No-op, API not implemented
     }
 
     override fun getAllCustomerListEntries(customerListReceiver: AmazonCustomerListReceiver, type: Int) {

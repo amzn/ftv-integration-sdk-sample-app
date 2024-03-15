@@ -2,13 +2,13 @@
 
 ## Overview
 This sample app demonstrates integrating with the Fire TV Integration SDK available on Amazon Fire TV. Further details regarding the Fire TV Integration SDK
-on Amazon Fire TV can be found in the [Amazon Developer Portal](TODO). If you cannot access this link
+on Amazon Fire TV can be found in the [Amazon Developer Portal](https://developer.amazon.com/docs/fire-tv/get-started-with-firetv-integration-sdk.html). If you cannot access this link
 please reach out to your Amazon contact for access
 
 ## Setup
 - Ensure you have Java 11 installed to avoid build errors with Gradle
   - **NOTE**: We recommend building this project on a Mac or any environment with a Unix-like operating system
-- Follow the steps [here](TODO) to include the Fire TV Integration SDK in the project within `app/libs`
+- Follow the steps [here](https://developer.amazon.com/docs/fire-tv/get-started-with-firetv-integration-sdk.html#step-1-include-the-sdk-in-your-app) to include the Fire TV Integration SDK in the project within `app/libs`
   - You need to create the `libs` directory if it does not already exist
 - Install the sample app on your Fire TV device
   - First, ensure you are able to connect to your Fire TV device using ADB (see instructions [here](https://developer.amazon.com/docs/fire-tv/connecting-adb-to-device.html))
@@ -17,7 +17,7 @@ please reach out to your Amazon contact for access
 ## Features
 
 ### Watch Activity
-**Documentation**: TODO
+**Documentation**: https://developer.amazon.com/docs/fire-tv/watch-activity.html
 
 **Code**:
 - [`VideoPlayerFragment.kt`](app/src/main/java/com/amazon/firetv/integrationsdk/video/player/VideoPlayerFragment.kt)
@@ -42,7 +42,7 @@ please reach out to your Amazon contact for access
   - Contains a helper extension function to centralize the logic for determining the current state of the video player
 
 ### Watchlist
-**Documentation**: https://developer.integ.amazon.com/docs/fire-tv/watchlist.html
+**Documentation**: https://developer.amazon.com/docs/fire-tv/watchlist.html
 
 **Code**:
 - [`AccountFragment.kt`](app/src/main/java/com/amazon/firetv/integrationsdk/account/AccountFragment.kt#L93-94)
@@ -50,17 +50,8 @@ please reach out to your Amazon contact for access
 - [`FireTvWatchlistReporter.kt`](app/src/main/java/com/amazon/firetv/integrationsdk/sdk/FireTvWatchlistReporter.kt)
   - Helper class whichs wraps calls to the FireTvIntegrationSDK `AmazonCustomerListReceiver` to report watchlist changes as well as refreshing the state of the watchlist for all profiles
 
-### Content Entitlements
-**Documentation**: https://developer.integ.amazon.com/docs/fire-tv/individual-content-entitlements.html
-
-**Code**:
-- [`AccountFragment.kt`](app/src/main/java/com/amazon/firetv/integrationsdk/account/AccountFragment.kt#L97-103)
-  - At sign-in, refreshes the state of the user's content entitlements (purchases, rentals, and recordings)
-- [`FireTvContentEntitlementReporter.kt`](app/src/main/java/com/amazon/firetv/integrationsdk/sdk/FireTvContentEntitlementReporter.kt)
-  - Helper class which wraps calls to the FireTvIntegrationSDK `AmazonEntitlementReceiver` to report content entitlement state
-
 ### Amazon Data Integration Service Implementation
-**Documentation**: TODO
+**Documentation**: https://developer.amazon.com/docs/fire-tv/get-started-with-firetv-integration-sdk.html#step-5-implement-the-data-pull-service-for-background-or-off-device-data
 
 **Code**:
 - [`MyAmznDataIntegrationService.kt`](app/src/main/java/com/amazon/firetv/integrationsdk/sdk/MyAmznDataIntegrationService.kt)

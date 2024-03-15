@@ -8,7 +8,7 @@ please reach out to your Amazon contact for access
 ## Setup
 - Ensure you have Java 11 installed to avoid build errors with Gradle
   - **NOTE**: We recommend building this project on a Mac or any environment with a Unix-like operating system
-- Follow the steps [here](TODO) to include the Fire TV Integration SDK in the project within `app/libs`
+- Follow the steps [here](https://developer.amazon.com/docs/fire-tv/get-started-with-firetv-integration-sdk.html#step-1-include-the-sdk-in-your-app) to include the Fire TV Integration SDK in the project within `app/libs`
   - You need to create the `libs` directory if it does not already exist
 - Install the sample app on your Fire TV device
   - First, ensure you are able to connect to your Fire TV device using ADB (see instructions [here](https://developer.amazon.com/docs/fire-tv/connecting-adb-to-device.html))
@@ -51,7 +51,7 @@ please reach out to your Amazon contact for access
   - Helper class whichs wraps calls to the FireTvIntegrationSDK `AmazonCustomerListReceiver` to report watchlist changes as well as refreshing the state of the watchlist for all profiles
 
 ### Amazon Data Integration Service Implementation
-**Documentation**: https://developer.amazon.com/docs/fire-tv/get-started-with-firetv-integration-sdk.html
+**Documentation**: https://developer.amazon.com/docs/fire-tv/get-started-with-firetv-integration-sdk.html#step-5-implement-the-data-pull-service-for-background-or-off-device-data
 
 **Code**:
 - [`MyAmznDataIntegrationService.kt`](app/src/main/java/com/amazon/firetv/integrationsdk/sdk/MyAmznDataIntegrationService.kt)
